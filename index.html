@@ -644,7 +644,7 @@
                 <div class="row">
                 	<div id="message" class="col-md-12 message"> <!-- Show Message --> </div>
                   
-                	<form method="post" action="" id="rsvpform">
+                	<form  method="POST" data-netlify="true" data-netlify-recaptcha="true">
                 		<div class="col-md-6">
                         	<div id="fullname" class="form-group">
     							<label for="inputname">*NAME</label>
@@ -668,9 +668,13 @@
     							<textarea id="inputmessage" class="form-control ajax-input" rows="14" data-output-label="Output Message"></textarea>
  							</div> 
                     	</div>
+						<div data-netlify-recaptcha="true"></div>
                         <div class="col-md-12 text-center">
                         	<div class="form-group">
-    							<input type="submit" id="submitButton"  name="submitButton" class="button medium reverse" value="SUBMIT">
+    							<!-- <input type="submit" id="submitButton"  name="submitButton" class="button medium reverse"> -->
+								<button type="submit" id="submitButton"  class="button medium reverse">
+									Send Message
+								  </button>
  							</div> 
                     	</div>
                     </form>
